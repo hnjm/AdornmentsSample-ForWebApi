@@ -126,23 +126,23 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.341.2\lib\net40\ThinkGeo.MapSuite.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.347.2\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.Adornments, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Adornments.10.0.341.2\lib\net40\ThinkGeo.MapSuite.Layers.Adornments.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Adornments.10.0.347.2\lib\net45\ThinkGeo.MapSuite.Layers.Adornments.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.Graticule, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Graticule.10.0.341.2\lib\net40\ThinkGeo.MapSuite.Layers.Graticule.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Graticule.10.0.347.2\lib\net45\ThinkGeo.MapSuite.Layers.Graticule.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.341.2\lib\net40\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.347.2\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.WebApi, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MapSuiteWebForWebApi-BareBone.10.0.341.2\lib\net40\ThinkGeo.MapSuite.WebApi.dll</HintPath>
+      <HintPath>..\packages\MapSuiteWebForWebApi-BareBone.10.0.347.2\lib\net45\ThinkGeo.MapSuite.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
