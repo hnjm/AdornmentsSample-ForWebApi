@@ -110,19 +110,25 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="ThinkGeo.MapSuite, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Microsoft.SqlServer.Types">
+      <HintPath>..\packages\MapSuiteDependency-MicrosoftSqlServerTypes.10.0.0\lib\net45\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="ThinkGeo.MapSuite">
       <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
     </Reference>
-    <Reference Include="ThinkGeo.MapSuite.Layers.Adornments, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="ThinkGeo.MapSuite.ProductCenter">
+      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.ProductCenter.exe</HintPath>
+    </Reference>
+    <Reference Include="ThinkGeo.MapSuite.Layers.Adornments">
       <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Adornments.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.Adornments.dll</HintPath>
     </Reference>
-    <Reference Include="ThinkGeo.MapSuite.Layers.Graticule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="ThinkGeo.MapSuite.Layers.Graticule">
       <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Graticule.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.Graticule.dll</HintPath>
     </Reference>
-    <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile">
       <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
     </Reference>
-    <Reference Include="ThinkGeo.MapSuite.WebApi, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="ThinkGeo.MapSuite.WebApi">
       <HintPath>..\packages\MapSuiteWebForWebApi-BareBone.10.0.344.6\lib\net45\ThinkGeo.MapSuite.WebApi.dll</HintPath>
     </Reference>
   </ItemGroup>
