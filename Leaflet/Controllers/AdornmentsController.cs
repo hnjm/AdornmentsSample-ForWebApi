@@ -49,8 +49,8 @@ namespace Adornments
             wgs84ToGoogleProjection.ExternalProjectionParametersString = Proj4Projection.GetGoogleMapParametersString(); //900913
             wgs84ToGoogleProjection.Open();
 
-            string shpFilePathName = string.Format(@"{0}\App_Data\ShapeFile\Schools.shp", baseDirectory);
-            string schoolImage = string.Format(@"{0}\Images\school.png", baseDirectory);
+            string shpFilePathName = string.Format(@"{0}/App_Data/ShapeFile/Schools.shp", baseDirectory);
+            string schoolImage = string.Format(@"{0}/Images/school.png", baseDirectory);
             ShapeFileFeatureLayer schoolsLayer = new ShapeFileFeatureLayer(shpFilePathName);
             schoolsLayer.Name = "schoolLayer";
             schoolsLayer.Transparency = 200f;
@@ -191,7 +191,7 @@ namespace Adornments
         private LogoAdornmentLayer BuildLogoAdornmentLayer()
         {
             LogoAdornmentLayer logoAdornmentLayer = new LogoAdornmentLayer();
-            string path = string.Format(@"{0}\Images\ThinkGeoLogo.png", baseDirectory);
+            string path = string.Format(@"{0}/Images/ThinkGeoLogo.png", baseDirectory);
             logoAdornmentLayer.Location = AdornmentLocation.UpperRight;
             logoAdornmentLayer.Image = new GeoImage(path);
 
