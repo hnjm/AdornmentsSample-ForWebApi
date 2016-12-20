@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -18,8 +18,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -64,10 +63,8 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Net.Http">
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest">
-    </Reference>
+    <Reference Include="System.Net.Http"></Reference>
+    <Reference Include="System.Net.Http.WebRequest"></Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
@@ -111,22 +108,22 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite">
-      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.0\lib\net45\ThinkGeo.MapSuite.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.ProductCenter">
-      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.344.6\lib\net45\ThinkGeo.MapSuite.ProductCenter.exe</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.10.0.0\lib\net45\ThinkGeo.MapSuite.ProductCenter.exe</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.ShapeFile">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.ShapeFile.10.0.0\lib\net45\ThinkGeo.MapSuite.Layers.ShapeFile.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.Graticule">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Graticule.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.Graticule.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Graticule.10.0.0\lib\net45\ThinkGeo.MapSuite.Layers.Graticule.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.Layers.Adornments">
-      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Adornments.10.0.344.6\lib\net45\ThinkGeo.MapSuite.Layers.Adornments.dll</HintPath>
+      <HintPath>..\packages\ThinkGeo.MapSuite.Layers.Adornments.10.0.0\lib\net45\ThinkGeo.MapSuite.Layers.Adornments.dll</HintPath>
     </Reference>
     <Reference Include="ThinkGeo.MapSuite.WebApi">
-      <HintPath>..\packages\MapSuiteWebForWebApi-BareBone.10.0.344.6\lib\net45\ThinkGeo.MapSuite.WebApi.dll</HintPath>
+      <HintPath>..\packages\MapSuiteWebForWebApi-BareBone.10.0.0\lib\net45\ThinkGeo.MapSuite.WebApi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -255,8 +252,7 @@
           <IISUrl>http://localhost:64597/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
