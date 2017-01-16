@@ -150,7 +150,10 @@ namespace Adornments
             title.TextStyle = new TextStyle("Map Legend", new GeoFont("Arial", 10, DrawingFontStyles.Bold), new GeoSolidBrush(GeoColor.SimpleColors.Black));
 
             LegendItem legendItem1 = new LegendItem();
-            legendItem1.ImageStyle = LineStyles.Railway1;
+            GeoPen centerPen = new GeoPen(GeoColor.StandardColors.DarkGray, 6);
+            centerPen.DashPattern.Add(0.25f);
+            centerPen.DashPattern.Add(1);
+            legendItem1.ImageStyle = new LineStyle() { InnerPen = new GeoPen(GeoColor.StandardColors.White, 2), OuterPen = new GeoPen(GeoColor.StandardColors.DarkGray, 4), CenterPen = centerPen };
             legendItem1.TextStyle = new TextStyle("Railroad ", new GeoFont("Arial", 8), new GeoSolidBrush(GeoColor.SimpleColors.Black));
 
             LegendItem legendItem2 = new LegendItem();
