@@ -161,7 +161,7 @@ namespace Adornments
             legendItem2.TextStyle = new TextStyle("Parks", new GeoFont("Arial", 8), new GeoSolidBrush(GeoColor.SimpleColors.Black));
 
             LegendItem legendItem3 = new LegendItem();
-            string path = string.Format(@"{0}\Images\school.png", baseDirectory);
+            string path = string.Format(@"{0}/Images/school.png", baseDirectory);
             legendItem3.ImageStyle = new PointStyle(new GeoImage(path));
             legendItem3.TextStyle = new TextStyle("School", new GeoFont("Arial", 8), new GeoSolidBrush(GeoColor.SimpleColors.Black));
 
