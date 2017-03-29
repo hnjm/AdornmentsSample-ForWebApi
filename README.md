@@ -4,6 +4,8 @@
 
 Learn how to add legends, scale bars, directional arrows, and many more adornments to your map.
 
+Please refer to [Wiki](http://wiki.thinkgeo.com/wiki/map_suite_desktop_for_wpf) for the details.
+
 ![Screenshot](https://github.com/ThinkGeo/AdornmentsSample-ForWebApi/blob/master/ScreenShot.png)
 
 ### Requirements
@@ -17,11 +19,11 @@ Working...
 
 ### Getting Help
 
-[Map Suite WebAPI Wiki Resources](http://wiki.thinkgeo.com/wiki/map_suite_webapi_edition)
+[Map Suite WebAPI Wiki Resources](http://wiki.thinkgeo.com/wiki/map_suite_web_for_webapi)
 
-[Map Suite WebAPI Product Description](http://thinkgeo.com/map-suite-developer-gis/webapi-edition/)
+[Map Suite WebAPI Product Description](https://thinkgeo.com/ui-controls#web-platforms)
 
-[ThinkGeo Community Site](http://community.thinkgeo.com/c/map-suite-webapi-edition-support)
+[ThinkGeo Community Site](http://community.thinkgeo.com/)
 
 [ThinkGeo Web Site](http://www.thinkgeo.com)
 
