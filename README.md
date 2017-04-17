@@ -1,4 +1,4 @@
-# Adornments Sample
+# Adornments Sample for WebApi
 
 ### Description
 
