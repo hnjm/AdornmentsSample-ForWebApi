@@ -14,9 +14,42 @@ This sample makes use of the following NuGet Packages
 [MapSuite 10.0.0](https://www.nuget.org/packages?q=ThinkGeo)
 
 ### About the Code
+```csharp
+switch (adornmentType)
+{
+    case AdornmentsType.ScaleBarAdornment:
+        adornmentLayer = new ScaleBarAdornmentLayer();
+        break;
 
-Working...
+    case AdornmentsType.ScaleLineAdornment:
+        adornmentLayer = new ScaleLineAdornmentLayer();
+        break;
 
+    case AdornmentsType.ScaleTextAdornment:
+        adornmentLayer = new ScaleTextAdornmentLayer();
+        break;
+
+    case AdornmentsType.LogoAdornment:
+        adornmentLayer = BuildLogoAdornmentLayer();
+        break;
+
+    case AdornmentsType.GraticuleAdornment:
+        adornmentLayer = BuildGraticuleAdornmentLayer();
+        break;
+
+    case AdornmentsType.LegendAdornment:
+        adornmentLayer = BuildLegendAdornmentLayer();
+        break;
+
+    case AdornmentsType.MagneticDeclinationAdornment:
+        adornmentLayer = BuildMagneticDeclinationAdornmentLayer();
+        break;
+
+    default:
+        adornmentLayer = null;
+        break;
+}
+```
 ### Getting Help
 
 [Map Suite WebAPI Wiki Resources](http://wiki.thinkgeo.com/wiki/map_suite_web_for_webapi)
@@ -30,7 +63,11 @@ Working...
 ### Key APIs
 This example makes use of the following APIs:
 
-Working...
+- [ThinkGeo.MapSuite.Layers.ScaleBarAdornmentLayer](http://wiki.thinkgeo.com/wiki/api/thinkgeo.mapsuite.layers.scalebaradornmentlayer)
+- [ThinkGeo.MapSuite.Layers.ScaleLineAdornmentLayer](http://wiki.thinkgeo.com/wiki/api/thinkgeo.mapsuite.layers.scalelineadornmentlayer)
+- [ThinkGeo.MapSuite.Layers.ScaleTextAdornmentLayer](http://wiki.thinkgeo.com/wiki/api/thinkgeo.mapsuite.layers.scaletextadornmentlayer)
+- [ThinkGeo.MapSuite.Layers.LogoAdornmentLayer](http://wiki.thinkgeo.com/wiki/api/thinkgeo.mapsuite.layers.logoadornmentlayer)
+- [ThinkGeo.MapSuite.Layers.GraticuleFeatureLayer](http://wiki.thinkgeo.com/wiki/api/thinkgeo.mapsuite.layers.graticulefeaturelayer)
 
 ### About Map Suite
 Map Suite is a set of powerful development components and services for the .Net Framework.
