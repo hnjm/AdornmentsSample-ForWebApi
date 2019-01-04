@@ -6,7 +6,7 @@ Learn how to add legends, scale bars, directional arrows, and many more adornmen
 
 Please refer to [Wiki](http://wiki.thinkgeo.com/wiki/map_suite_web_for_webapi) for the details.
 
-![Screenshot](https://github.com/ThinkGeo/AdornmentsSample-ForWebApi/blob/master/ScreenShot.png)
+![Screenshot](https://github.com/ThinkGeo/AdornmentsSample-ForWebApi/blob/master/Screenshot.gif)
 
 ### Requirements
 This sample makes use of the following NuGet Packages
