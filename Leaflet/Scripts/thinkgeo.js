@@ -28,13 +28,12 @@ L.imageButtons({
 }).addTo(map);
 
 // Add WorldMapKit Online as the map's background layer. 
-var osmWorldMapKitLayer = L.tileLayer.wms('http://{s}.thinkgeo.com/CachedWMSServer/WmsServer.axd', {
-    subdomains: ['worldmapkit1', 'worldmapkit2', 'worldmapkit3', 'worldmapkit4', 'worldmapkit5', 'worldmapkit6'],
-    layers: 'OSMWorldMapKitLayer',
+var osmWorldMapKitLayer = L.tileLayer('https://{s}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/512/{z}/{x}/{y}.png', {
+    subdomains: ['gisserver1', 'gisserver2', 'gisserver3', 'gisserver4', 'gisserver5', 'gisserver6'],
+    layers: 'ThinkGeoCloudMaps',
     format: 'image/png',
-    styles: 'WorldMapKitDefaultStyle',
-    version: '1.1.1',
-    attribution: '<a href="http://thinkgeo.com/map-suite-developer-gis/world-map-kit-sdk/">ThinkGeo</a> | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors '
+    styles: 'Light',
+    version: '1.1.1'
 });
 osmWorldMapKitLayer.addTo(map);
 

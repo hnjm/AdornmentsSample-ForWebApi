@@ -18,42 +18,38 @@ var map = new ol.Map({
 
 var imgControls = new app.ImagesControl({
     imgs: [
-            {
-                id: 'adornmentOptions',
-                src: 'Images/LeftControlBar.png',
-                title: 'Show Adornments Control Bar',
-                callback: function () { $('#leftControlBar').animate({ 'left': '0px' }); }
-            },
-            {
-                id: 'btnInfo',
-                src: 'Images/info.png',
-                title: 'Show help',
-                callback: function () { window.open('http://wiki.thinkgeo.com/wiki/map_suite_adornments', '_blank'); }
-            }
+        {
+            id: 'adornmentOptions',
+            src: 'Images/LeftControlBar.png',
+            title: 'Show Adornments Control Bar',
+            callback: function () { $('#leftControlBar').animate({ 'left': '0px' }); }
+        },
+        {
+            id: 'btnInfo',
+            src: 'Images/info.png',
+            title: 'Show help',
+            callback: function () { window.open('http://wiki.thinkgeo.com/wiki/map_suite_adornments', '_blank'); }
+        }
     ]
 });
 map.addControl(imgControls);
 
-var osmWorldMapKitLayer = new ol.layer.Tile({
-    source: new ol.source.TileWMS(({
-        urls: ['http://worldmapkit1.thinkgeo.com/CachedWMSServer/WmsServer.axd',
-            'http://worldmapkit2.thinkgeo.com/CachedWMSServer/WmsServer.axd',
-            'http://worldmapkit3.thinkgeo.com/CachedWMSServer/WmsServer.axd',
-            'http://worldmapkit4.thinkgeo.com/CachedWMSServer/WmsServer.axd',
-            'http://worldmapkit5.thinkgeo.com/CachedWMSServer/WmsServer.axd',
-            'http://worldmapkit6.thinkgeo.com/CachedWMSServer/WmsServer.axd'],
+var url = 'https://gisserver{1-6}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/512/{z}/{x}/{y}.png';
+
+var thinkgeoCloudMapsLayer = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        url: url,
+        maxZoom: 19,
+        tileSize: 512,
         params:
-            {
-                'LAYERS': 'OSMWorldMapKitLayer',
-                'VERSION': '1.1.1',
-                'STYLE': 'WorldMapKitDefaultStyle'
-            },
-        attributions: [new ol.Attribution({
-            html: '<a href="http://thinkgeo.com/map-suite-developer-gis/world-map-kit-sdk/">ThinkGeo</a> | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors <a href="http://www.openstreetmap.org/copyright">ODbL</a>'
-        })]
-    }))
+        {
+            'LAYERS': 'ThinkGeoCloudMaps',
+            'VERSION': '10.4.0',
+            'STYLE': 'Light'
+        }
+    })
 });
-map.addLayer(osmWorldMapKitLayer);
+map.addLayer(thinkgeoCloudMapsLayer);
 
 var xyzSource = new ol.source.XYZ({
     url: getRootPath() + 'Adornments/SchoolShapeFileLayer/{z}/{x}/{y}',
