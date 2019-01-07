@@ -28,7 +28,7 @@ L.imageButtons({
 }).addTo(map);
 
 // Add WorldMapKit Online as the map's background layer. 
-var osmWorldMapKitLayer = L.tileLayer('https://{s}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/512/{z}/{x}/{y}.png', {
+var osmWorldMapKitLayer = L.tileLayer('https://{s}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/256/{z}/{x}/{y}.png', {
     subdomains: ['gisserver1', 'gisserver2', 'gisserver3', 'gisserver4', 'gisserver5', 'gisserver6'],
     layers: 'ThinkGeoCloudMaps',
     format: 'image/png',
