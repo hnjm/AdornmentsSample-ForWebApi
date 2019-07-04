@@ -34,7 +34,7 @@ var imgControls = new app.ImagesControl({
 });
 map.addControl(imgControls);
 
-var url = 'https://gisserver{1-6}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/512/{z}/{x}/{y}.png';
+var url = 'https://cloud{1-6}.thinkgeo.com/api/v1/maps/raster/light/x1/3857/512/{z}/{x}/{y}.png?apikey=ThinkGeo Cloud API Key';
 
 var thinkgeoCloudMapsLayer = new ol.layer.Tile({
     source: new ol.source.XYZ({
@@ -46,6 +46,38 @@ var thinkgeoCloudMapsLayer = new ol.layer.Tile({
             'LAYERS': 'ThinkGeoCloudMaps',
             'VERSION': '10.4.0',
             'STYLE': 'Light'
+        },
+
+        // --------------------------------------------------------------------------------------
+        // Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
+        // An API Key. The following function is just for reminding you to input the key. 
+        // Feel free to remove this function after the key was input. 
+        // --------------------------------------------------------------------------------------
+        tileLoadFunction: function (imageTile, src) {
+            fetch(src).then((response) => {
+                return response.blob();
+            }).then((blob) => {
+                if (blob) {
+                    imageTile.getImage().src = URL.createObjectURL(blob);
+                }
+                else {
+                    imageTile.getImage().src = "";
+                }
+            }).catch((error) => {
+                var canvas = document.createElement("canvas");
+                canvas.width = 512;
+                canvas.height = 512;
+                var context = canvas.getContext("2d");
+                context.font = "14px Arial";
+                context.strokeText("Backgrounds for this sample are", 256, 100);
+                context.strokeText("powered by ThinkGeo Cloud Maps and", 256, 120);
+                context.strokeText("require An API Key.These were sent", 256, 140);
+                context.strokeText("to you via email when you signed up", 256, 160);
+                context.strokeText("with ThinkGeo, or you can register", 256, 180);
+                context.strokeText("now at https://cloud.thinkgeo.com", 256, 200);
+                var url = canvas.toDataURL("image/png", 1);
+                imageTile.getImage().src = url;
+            });
         }
     })
 });
