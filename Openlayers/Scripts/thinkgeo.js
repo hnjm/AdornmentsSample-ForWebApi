@@ -55,28 +55,31 @@ var thinkgeoCloudMapsLayer = new ol.layer.Tile({
         // --------------------------------------------------------------------------------------
         tileLoadFunction: function (imageTile, src) {
             fetch(src).then((response) => {
-                return response.blob();
-            }).then((blob) => {
-                if (blob) {
-                    imageTile.getImage().src = URL.createObjectURL(blob);
+                if (response.status === 401) {
+                    var canvas = document.createElement("canvas");
+                    canvas.width = 512;
+                    canvas.height = 512;
+                    var context = canvas.getContext("2d");
+                    context.font = "14px Arial";
+                    context.strokeText("Backgrounds for this sample are", 256, 100);
+                    context.strokeText("powered by ThinkGeo Cloud Maps and", 256, 120);
+                    context.strokeText("require An API Key.These were sent", 256, 140);
+                    context.strokeText("to you via email when you signed up", 256, 160);
+                    context.strokeText("with ThinkGeo, or you can register", 256, 180);
+                    context.strokeText("now at https://cloud.thinkgeo.com", 256, 200);
+                    var url = canvas.toDataURL("image/png", 1);
+                    imageTile.getImage().src = url;
                 }
                 else {
-                    imageTile.getImage().src = "";
+                    response.blob().then((blob) => {
+                        if (blob) {
+                            imageTile.getImage().src = URL.createObjectURL(blob);
+                        }
+                        else {
+                            imageTile.getImage().src = "";
+                        }
+                    });
                 }
-            }).catch((error) => {
-                var canvas = document.createElement("canvas");
-                canvas.width = 512;
-                canvas.height = 512;
-                var context = canvas.getContext("2d");
-                context.font = "14px Arial";
-                context.strokeText("Backgrounds for this sample are", 256, 100);
-                context.strokeText("powered by ThinkGeo Cloud Maps and", 256, 120);
-                context.strokeText("require An API Key.These were sent", 256, 140);
-                context.strokeText("to you via email when you signed up", 256, 160);
-                context.strokeText("with ThinkGeo, or you can register", 256, 180);
-                context.strokeText("now at https://cloud.thinkgeo.com", 256, 200);
-                var url = canvas.toDataURL("image/png", 1);
-                imageTile.getImage().src = url;
             });
         }
     })
@@ -113,7 +116,7 @@ $('.leftControlBarBody div').click(function () {
 
     selectedAdornment = $(this).attr('id');
 
-    if (selectedAdornment == "LegendAdornment") {
+    if (selectedAdornment === "LegendAdornment") {
         map.setView(new ol.View({
             center: ol.proj.transform([-96.8216, 33.1447], 'EPSG:4326', 'EPSG:3857'),
             zoom: 15
