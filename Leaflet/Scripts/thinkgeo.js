@@ -34,43 +34,42 @@ var osmWorldMapKitLayer = L.tileLayer('https://{s}.thinkgeo.com/api/v1/maps/rast
     format: 'image/png',
     styles: 'Light',
     version: '1.1.1'
-});
-osmWorldMapKitLayer.addTo(map);
-
-// --------------------------------------------------------------------------------------
-// Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
-// An API Key. The following function is just for reminding you to input the key. 
-// Feel free to remove this function after the key was input. 
-// --------------------------------------------------------------------------------------
-osmWorldMapKitLayer.on('tileloadstart', function (e) {
-    //e.tile.src = drawException();
-    fetch(e.tile.src).then((response) => {
-        if (response.status === 401) {
-            var canvas = document.createElement("canvas");
-            canvas.width = 512;
-            canvas.height = 512;
-            var context = canvas.getContext("2d");
-            context.font = "14px Arial";
-            context.strokeText("Backgrounds for this sample are", 256, 100);
-            context.strokeText("powered by ThinkGeo Cloud Maps and", 256, 120);
-            context.strokeText("require An API Key.These were sent", 256, 140);
-            context.strokeText("to you via email when you signed up", 256, 160);
-            context.strokeText("with ThinkGeo, or you can register", 256, 180);
-            context.strokeText("now at https://cloud.thinkgeo.com", 256, 200);
-            e.tile.src = canvas.toDataURL("image/png", 1);
-        }
-        else {
-            response.blob().then((blob) => {
-                if (blob) {
-                    e.tile.src = URL.createObjectURL(blob);
-                }
-                else {
-                    e.tile.src = "";
-                }
-            });
-        }
-    });
-});
+})
+    // --------------------------------------------------------------------------------------
+    // Backgrounds for this sample are powered by ThinkGeo Cloud Maps and require
+    // An API Key. The following function is just for reminding you to input the key. 
+    // Feel free to remove this function after the key was input. 
+    // --------------------------------------------------------------------------------------
+    .on('tileloadstart', function (e) {
+        //e.tile.src = drawException();
+        fetch(e.tile.src).then((response) => {
+            if (response.status === 401) {
+                var canvas = document.createElement("canvas");
+                canvas.width = 256;
+                canvas.height = 256;
+                var context = canvas.getContext("2d");
+                context.font = "14px Arial";
+                context.strokeText("Backgrounds for this sample are", 10, 20);
+                context.strokeText("powered by ThinkGeo Cloud Maps and", 10, 40);
+                context.strokeText("require An API Key.These were sent", 10, 60);
+                context.strokeText("to you via email when you signed up", 10, 80);
+                context.strokeText("with ThinkGeo, or you can register", 10, 100);
+                context.strokeText("now at https://cloud.thinkgeo.com", 10, 120);
+                e.tile.src = canvas.toDataURL("image/png", 1);
+            }
+            else {
+                response.blob().then((blob) => {
+                    if (blob) {
+                        e.tile.src = URL.createObjectURL(blob);
+                    }
+                    else {
+                        e.tile.src = "";
+                    }
+                });
+            }
+        });
+    })
+    .addTo(map);
 
 var layer = L.dynamicLayer(L.Util.getRootPath() + 'Adornments/SchoolShapeFileLayer/{z}/{x}/{y}', {
     unloadInvisibleTiles: true, reuseTiles: false
