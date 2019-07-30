@@ -63,7 +63,7 @@ var thinkgeoCloudMapsLayer = new ol.layer.Tile({
                     context.font = "14px Arial";
                     context.strokeText("Backgrounds for this sample are", 256, 100);
                     context.strokeText("powered by ThinkGeo Cloud Maps and", 256, 120);
-                    context.strokeText("require An API Key.These were sent", 256, 140);
+                    context.strokeText("require an API Key. This was sent", 256, 140);
                     context.strokeText("to you via email when you signed up", 256, 160);
                     context.strokeText("with ThinkGeo, or you can register", 256, 180);
                     context.strokeText("now at https://cloud.thinkgeo.com", 256, 200);

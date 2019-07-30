@@ -51,7 +51,7 @@ var osmWorldMapKitLayer = L.tileLayer('https://{s}.thinkgeo.com/api/v1/maps/rast
                 context.font = "14px Arial";
                 context.strokeText("Backgrounds for this sample are", 10, 20);
                 context.strokeText("powered by ThinkGeo Cloud Maps and", 10, 40);
-                context.strokeText("require An API Key.These were sent", 10, 60);
+                context.strokeText("require an API Key. This was sent", 10, 60);
                 context.strokeText("to you via email when you signed up", 10, 80);
                 context.strokeText("with ThinkGeo, or you can register", 10, 100);
                 context.strokeText("now at https://cloud.thinkgeo.com", 10, 120);
